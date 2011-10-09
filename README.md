@@ -27,10 +27,12 @@ From this tree:
 The method `tree:from_bfs_dfs/2` returns a tree of `node`s.
 Each `node` is composed of a value, a left branch and a right branch.
 If a branch is empty, the node has the atom `undefined`.
+
 E.g.
 ```erlang
 {node,5,undefined,undefined}
 ```
+
 This node has value 5 and is a leaf node (i.e. it has no children).
 
 ```erlang
