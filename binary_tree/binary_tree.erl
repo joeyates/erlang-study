@@ -2,7 +2,7 @@
 
 -include("node.hrl").
 
--compile(export_all).
+-export([from_bfs_dfs/2]).
 
 from_bfs_dfs(_, []) ->
     % Done
