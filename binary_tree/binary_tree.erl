@@ -30,6 +30,9 @@ from_bfs_dfs(Bfs, Dfs) ->
 	    from_bfs_dfs(BTail, Dfs)
     end.
 
+% return two lists:
+% - elements before the first occurence of Elem,
+% - elements after the first occurence of Elem.
 spliton(Elem, List) ->
     {Before, From} = lists:splitwith(fun(A) -> A /= Elem end, List),
     case From of
