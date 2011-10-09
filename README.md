@@ -10,15 +10,15 @@ Reconstruct a binary tree from its breadth-first and depth-first search.
 ## Example
 
 From this tree:
-           1
-         /  \
-        /    \
-       /      \
-      2        6
-     / \      /
-    7   3    8
-   /     \
-  4       5
+             1
+           /  \
+          /    \
+         /      \
+        2        6
+       / \      /
+      7   3    8
+     /     \
+    4       5
 
 * breadth-first search: 1,2,6,7,3,8,4,5
 * depth-first search: 4,7,5,2,3,1,8,6
