@@ -10,6 +10,7 @@ Reconstruct a binary tree from its breadth-first and depth-first search.
 ## Example
 
 From this tree:
+
              1
            /  \
           /    \
