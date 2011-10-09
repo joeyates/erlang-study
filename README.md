@@ -6,7 +6,7 @@ Programs
 binary_tree
 ===========
 
-# `node` record
+# node record
 
 A `node` is composed of a value, a left branch and a right branch.
 If a branch is empty, the node has the atom `undefined`.
@@ -41,7 +41,7 @@ can be represented as
 >             {node,6,{node,8,undefined,undefined},undefined}}.
 ```
 
-# `bfs/1`
+# bfs/1
 
 Converts a `node` into an array of elements in breadth-first search order.
 
@@ -50,7 +50,7 @@ Converts a `node` into an array of elements in breadth-first search order.
 [1,2,6,7,3,8,4,5]
 ```
 
-# `dfs/1`
+# dfs/1
 
 Converts a `node` into an array of elements in depth-first search order.
 
@@ -59,7 +59,7 @@ Converts a `node` into an array of elements in depth-first search order.
 [4,7,5,2,3,1,8,6]
 ```
 
-# `from_bfs_dfs/2`
+# from_bfs_dfs/2
 
 Reconstructs a binary tree from its breadth-first and depth-first searches.
 
