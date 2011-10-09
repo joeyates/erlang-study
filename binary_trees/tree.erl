@@ -9,7 +9,7 @@ from_bfs_dfs(_,[]) ->
     undefined;
 from_bfs_dfs(Bfs,Dfs) ->
     [BHead|BTail] = Bfs,
-    case list:spliton(BHead,Dfs) of
+    case spliton(BHead,Dfs) of
 	{Left,Right} ->
 	    #node{value=BHead,
 		  left=from_bfs_dfs(BTail,Left),
@@ -17,4 +17,13 @@ from_bfs_dfs(Bfs,Dfs) ->
 	not_found ->
 	    %% Try the next Dfs value
 	    from_bfs_dfs(BTail,Dfs)
+    end.
+
+spliton( Elem, List ) ->
+    {Before,From} = lists:splitwith(fun(A) -> A /= Elem end, List),
+    case From of
+	[Elem|After] ->
+	    {Before,After};
+	_Else ->
+	    not_found
     end.
