@@ -13,6 +13,7 @@ Each `node` is composed of a value, a left branch and a right branch.
 If a branch is empty, the node has the atom `undefined`.
 
 E.g.
+
 ```erlang
 {node,5,undefined,undefined}
 ```
