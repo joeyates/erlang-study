@@ -25,11 +25,9 @@ From this tree:
 * depth-first search: 4,7,5,2,3,1,8,6
 
 ```erlang
-1> Bfs=[1,2,6,7,3,8,4,5].
-[1,2,6,7,3,8,4,5]
-2> Dfs=[4,7,5,2,3,1,8,6].
-[4,7,5,2,3,1,8,6]
-3> tree:from_bfs_dfs(Bfs,Dfs).
+1> c(tree).
+{ok,tree}
+2> tree:from_bfs_dfs([1,2,6,7,3,8,4,5],[4,7,5,2,3,1,8,6]).
 {node,1,
       {node,2,
             {node,7,
