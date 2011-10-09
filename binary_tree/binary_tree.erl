@@ -1,4 +1,4 @@
--module(tree).
+-module(binary_tree).
 
 -include("node.hrl").
 
@@ -19,7 +19,7 @@ from_bfs_dfs(Bfs,Dfs) ->
 	    from_bfs_dfs(BTail,Dfs)
     end.
 
-spliton( Elem, List ) ->
+spliton(Elem,List) ->
     {Before,From} = lists:splitwith(fun(A) -> A /= Elem end, List),
     case From of
 	[Elem|After] ->

@@ -3,12 +3,12 @@ This repository is for the Erlang programs that I write to learn the language.
 Programs
 --------
 
-binary_trees
-============
+binary_tree
+===========
 
-The method `tree:from_bfs_dfs/2` reconstructs a binary tree from its breadth-first and depth-first searches.
+The method `binary_tree:from_bfs_dfs/2` reconstructs a binary tree from its breadth-first and depth-first searches.
 
-It returns a tree of `node`s.
+It returns a binary tree of `node`s.
 Each `node` is composed of a value, a left branch and a right branch.
 If a branch is empty, the node has the atom `undefined`.
 
@@ -22,7 +22,7 @@ This node has value 5 and is a leaf node (i.e. it has no children).
 
 ## Example
 
-From this tree:
+From this binary tree:
 
              1
            /  \
@@ -38,9 +38,9 @@ From this tree:
 * depth-first search: 4,7,5,2,3,1,8,6
 
 ```erlang
-1> c(tree).
-{ok,tree}
-2> tree:from_bfs_dfs([1,2,6,7,3,8,4,5],[4,7,5,2,3,1,8,6]).
+1> c(binary_tree).
+{ok,binary_tree}
+2> binary_tree:from_bfs_dfs([1,2,6,7,3,8,4,5],[4,7,5,2,3,1,8,6]).
 {node,1,
       {node,2,
             {node,7,
