@@ -18,8 +18,8 @@ From this tree:
         2        6
        / \      /
       7   3    8
-     /     \
-    4       5
+     / \
+    4   5
 
 * breadth-first search: 1,2,6,7,3,8,4,5
 * depth-first search: 4,7,5,2,3,1,8,6
