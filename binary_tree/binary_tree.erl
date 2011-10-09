@@ -26,7 +26,7 @@ from_bfs_dfs(Bfs, Dfs) ->
 		  left = from_bfs_dfs(BTail, Left),
 		  right = from_bfs_dfs(BTail, Right)};
 	not_found ->
-	    %% Try the next Dfs value
+	    %% Try the next Bfs value
 	    from_bfs_dfs(BTail, Dfs)
     end.
 
