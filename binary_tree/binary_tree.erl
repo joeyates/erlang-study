@@ -39,7 +39,7 @@ spliton(Elem, List) ->
 	    not_found
     end.
 
-% create lists of nodes at a certain depth
+% create lists of lists of elements at a certain depth
 internal_bfs({node, Value, undefined, undefined}) ->
     [[Value]];
 internal_bfs({node, Value, Left, undefined}) ->

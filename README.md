@@ -64,7 +64,7 @@ Converts a `node` into an array of elements in depth-first search order.
 Reconstructs a binary tree from its breadth-first and depth-first searches.
 
 ```erlang
-> binary_tree:from_bfs_dfs([1,2,6,7,3,8,4,5],[4,7,5,2,3,1,8,6]).
+> binary_tree:from_bfs_dfs([1,2,6,7,3,8,4,5], [4,7,5,2,3,1,8,6]).
 {node,1,
       {node,2,
             {node,7,
