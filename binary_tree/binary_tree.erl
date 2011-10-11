@@ -19,6 +19,8 @@ dfs({node, Value, Left, Right}) ->
 
 from_bfs_dfs(_, []) ->
     undefined;
+from_bfs_dfs([], _) ->
+    undefined;
 from_bfs_dfs(Bfs, Dfs) ->
     [BHead | BTail] = Bfs,
     case spliton(BHead, Dfs) of
@@ -37,9 +39,10 @@ from_bfs_dfs(Bfs, Dfs) ->
 spliton(Elem, List) ->
     {Before, From} = lists:splitwith(fun(A) -> A /= Elem end, List),
     case From of
+	% If Elem is in List, it will be the first element in From
 	[Elem | After] ->
 	    {Before, After};
-	_Else ->
+	_ ->
 	    not_found
     end.
 

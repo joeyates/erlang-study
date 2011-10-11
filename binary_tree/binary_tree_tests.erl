@@ -46,3 +46,27 @@ dfs_test() ->
     ?assertEqual([2, 1, 3],         binary_tree:dfs(Both)),
     ?assertEqual([4, 7, 5, 2, 3, 1, 8, 6],
 		 binary_tree:dfs(Large)).
+
+from_bfs_dfs_test() ->
+    Root = #node{value = 1},
+    Left = #node{value = 1, left = #node{value = 2}},
+    Right = #node{value = 1, right = #node{value = 3}},
+    Both = #node{value = 1,
+		 left = #node{value = 2},
+		 right = #node{value = 3}},
+    Large = #node{value = 1,
+                  left = #node{value = 2,
+			       left = #node{value = 7,
+					    left = #node{value = 4},
+					    right = #node{value = 5}},
+			       right = #node{value = 3}},
+                  right = #node{value = 6,
+				left = #node{value = 8}}},
+    ?assertEqual(undefined, binary_tree:from_bfs_dfs([], [])),
+    ?assertEqual(undefined, binary_tree:from_bfs_dfs([1], [2])),
+    ?assertEqual(Root, binary_tree:from_bfs_dfs([1], [1])),
+    ?assertEqual(Left, binary_tree:from_bfs_dfs([1, 2], [2, 1])),
+    ?assertEqual(Right, binary_tree:from_bfs_dfs([1, 3], [1, 3])),
+    ?assertEqual(Both, binary_tree:from_bfs_dfs([1, 2, 3], [2, 1, 3])),
+    ?assertEqual(Large, binary_tree:from_bfs_dfs([1, 2, 6, 7, 3, 8, 4, 5],
+						 [4, 7, 5, 2, 3, 1, 8, 6])).
